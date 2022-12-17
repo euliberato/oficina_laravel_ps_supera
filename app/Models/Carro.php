@@ -9,11 +9,24 @@ class Carro extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'servicos' => 'array'
+    ];
+
+    protected $dates = ['date'];
+
     protected $fillable = [
         'marca',
         'modelo',
         'versao',
-        'placa'
+        'placa',
+        'servicos'
     ];
+
+    protected $guarded = [];
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 
 }

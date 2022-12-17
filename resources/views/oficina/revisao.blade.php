@@ -1,13 +1,13 @@
 @extends('layouts.template')
 
-@section('title', 'Oficina')
+@section('title', 'Revisão')
 
 @section('content')
 
 <div id="event-create-container" class="col-md-6 offset-md-3 container-fluid">
     <h1>Formulário</h1>
     <p>Preencha os dados abaixo para solicitar seu orçamento.</p>
-    <form action="{{ route('oficina.veiculos') }}" method="POST">
+    <form action="/veiculos" method="POST">
         @csrf
             <div class="form-group">
                 <label for="title">Marca:</label>
@@ -19,11 +19,26 @@
             </div>
             <div class="form-group">
                 <label for="title">Versão:</label>
-                <input type="number" name="versao" id="versao" placeholder="Versão, exemplo: 3.2">
+                <input type="number" name="versao" id="versao" placeholder="Versão, exemplo: 3.0">
             </div>
             <div class="form-group">
                 <label for="title">Placa:</label>
                 <input type="text" class="form-control" id="placa" title="placa" name="placa" placeholder="Placa do veículo">
+            </div>
+            <div class="form-group">
+                <label for="title">Serviços:</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="servicos[]" value="Manutencao da Embreagem"> Manutenção da Embreagem
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="servicos[]" value="Revisao dos Freios"> Revisão dos Freios
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="servicos[]" value="Troca de oleo do motor"> Troca de óleo do motor
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="servicos[]" value="Alinhamento"> Alinhamento
             </div>
             <input type="submit" value="Solicitar Orçamento" class="btn btn-primary">
     </form>

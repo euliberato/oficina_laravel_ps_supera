@@ -28,11 +28,8 @@
             <div class="text"><p>O alinhamento e balanceamento tendem a ser procedimentos periódicos, pois as estradas não apresentam boas condições de tráfego e assim vão desalinhando e causando desgastes nos componentes da suspensão. Realizando também a troca de pneus ou rodízio dos mesmos, o alinhamento e balanceamento são necessários para manter a dirigibilidade e evitar desgastes irregulares dos pneus.</p></div>
         </div>
     </div>
-    <p class="info">E muitos mais, <a href="/revisao">entre no sistema</a> e solicite seu orçamento.</p>
+    <p class="info">E muitos mais, <a href="/veiculos/revisao">entre no sistema</a> e solicite seu orçamento.</p>
     <img src="img/banner2.jpg" alt="Carros" class="img-fluid">
 </div>
-
-
-
 
 @endsection

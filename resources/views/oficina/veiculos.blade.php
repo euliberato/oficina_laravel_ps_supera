@@ -9,7 +9,7 @@
         <h1>Meus Veículos:</h1>
     </div>
     <div class="col-md-10 offset-md-1 dashboard-events-container">
-        @if(is_countable($carros) && count($carros) > 0)
+        @if(count($carros) > 0)
         <table class="table">
             <thead>
                 <tr>
@@ -17,6 +17,7 @@
                     <th scope="col">Modelo</th>
                     <th scope="col">Versão</th>
                     <th scope="col">Placa</th>
+                    <th scope="col">Menu</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,11 +27,15 @@
                         <td>{{ $carro->modelo }}</td>
                         <td>{{ $carro->versao }}</td>
                         <td>{{ $carro->placa }}</td>
+                        <td>
+                            <a href="/veiculos/{{ $carro->id }}"><i class="fa-solid fa-circle-info"></i></a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
         @else
+        <i class="fa-solid fa-circle-exclamation"></i>
         <p>Você não tem nenhum veículo para manutenção, deseja <a href="/veiculos/revisao">marcar agora</a>?</p>
         @endif
     </div>

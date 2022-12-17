@@ -22,3 +22,13 @@ Route::get('/veiculos/revisao', [OficinaController::class, 'create'])->middlewar
 Route::post('/veiculos',[OficinaController::class, 'store'])->name('oficina.veiculos')->middleware('auth');
 
 Route::get('/veiculos', [OficinaController::class, 'veiculos'])->middleware('auth');
+
+Route::get('/veiculos/{id}', [OficinaController::class, 'show'])->middleware('auth');
+
+Route::delete('/veiculos/{id}', [OficinaController::class, 'destroy'])->middleware('auth');
+
+Route::get('/veiculos/editar/{id}', [OficinaController::class, 'edit'])->middleware('auth');
+
+Route::put('/veiculos/atualizar/{id}', [OficinaController::class, 'update'])->middleware('auth');
+
+Route::get('/veiculos', [OficinaController::class, 'dashboard'])->middleware('auth');

@@ -72,8 +72,7 @@ header li {
     padding: 10px;
 }
 
-.info,
-.msg {
+.info {
     background-color: #333333;
     color: #fff;
     padding: 20px;
@@ -81,8 +80,11 @@ header li {
 }
 
 .msg {
+    color: #4c9a2a;
     margin-top: 20px;
+    font-size: 20px;
 }
+
 /*Revisao - Pagina com Form*/
 #event-create-container {
     padding: 30px;
@@ -106,7 +108,7 @@ header li {
 
 /*Veiculos - Pagina com Dashboard*/
 .screen {
-    height: 67vh;
+    min-height: 67vh;
 }
 
 .dashboard-title-container {
@@ -120,6 +122,64 @@ header li {
     text-align: left;
 }
 
+.fa-circle-exclamation {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+td a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.fa-circle-info {
+    color: #333333;
+    margin: 0;
+}
+
+.fa-circle-info a {
+    padding: 100%;
+}
+
+/*CSS do Relatório - View Info*/
+.report-screen {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.report-text h1{
+    margin: 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.report-text p {
+    text-align: left;
+    background-color: #333333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.report-servicos {
+    text-align: left;
+}
+
+.report-menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-secondary,
+.bt-danger {
+    width: 190px;
+}
 /*CSS do Footer*/
 
 footer {
