@@ -9,6 +9,7 @@ use App\Models\User;
 
 class OficinaController extends Controller
 {
+    
     public function index(){
         return view('index');
     }
