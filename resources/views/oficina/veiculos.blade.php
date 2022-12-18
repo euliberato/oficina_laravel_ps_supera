@@ -10,6 +10,15 @@
     </div>
     <div class="col-md-10 offset-md-1 dashboard-events-container">
         @if(count($carros) > 0)
+        <form action="/veiculos/busca" method="POST">
+            @csrf
+            <span>Filtro:</span>
+                <select name="filtro" class="filter">
+                    <option value="todos">Todos</option>
+                    <option value="semana">Últimos 7 dias</option>
+                </select>
+            <button type="submit">Filtrar</button>
+        </form>
         <table class="table">
             <thead>
                 <tr>

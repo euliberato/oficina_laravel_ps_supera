@@ -11,19 +11,19 @@
         @csrf
             <div class="form-group">
                 <label for="title">Marca:</label>
-                <input type="text" class="form-control" id="marca" title="marca" name="marca" placeholder="Marca do veículo">
+                <input type="text" class="form-control" id="marca" title="marca" name="marca" placeholder="Marca do veículo" maxlength="10">
             </div>
             <div class="form-group">
                 <label for="title">Modelo:</label>
-                <input type="text" class="form-control" id="modelo" title="modelo" name="modelo" placeholder="Modelo do veículo">
+                <input type="text" class="form-control" id="modelo" title="modelo" name="modelo" placeholder="Modelo do veículo" maxlength="5">
             </div>
             <div class="form-group">
                 <label for="title">Versão:</label>
-                <input type="number" name="versao" id="versao" placeholder="Versão, exemplo: 3.0">
+                <input type="number" name="versao" id="versao" placeholder="Versão, exemplo: 3.0" maxlength="1" maxlength="2">
             </div>
             <div class="form-group">
                 <label for="title">Placa:</label>
-                <input type="text" class="form-control" id="placa" title="placa" name="placa" placeholder="Placa do veículo">
+                <input type="text" class="form-control" id="placa" title="placa" name="placa" placeholder="Placa do veículo" maxlength="6">
             </div>
             <div class="form-group">
                 <label for="title">Serviços:</label>

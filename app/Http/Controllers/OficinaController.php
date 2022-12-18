@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Carro;
 use App\Models\User;
 
+use Carbon\Carbon;
+
 class OficinaController extends Controller
 {
     
@@ -91,6 +93,24 @@ class OficinaController extends Controller
         Carro::findOrFail($request->id)->update($request->all());
         
         return redirect('/veiculos')->with('msg', 'Pedido de revisão atualizada com sucesso!');
+    }
+
+    public function search(Request $request){
+
+        $user = auth()->user();
+        $carros = $user->carros;
+
+        if($request->filtro == 'semana'){
+            $date = Carbon::now()->subDays(7);
+            $carros = Carro::where('created_at', '>=', $date)->get();
+            $carro = $user->carros;
+            return view('oficina.veiculos', ['carro' => $carro]);
+        }
+
+        if($request->filtro == 'todos'){
+            return view('oficina.veiculos', ['carros' => $carros]);
+        }
+
     }
 
 }

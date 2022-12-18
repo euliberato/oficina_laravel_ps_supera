@@ -112,6 +112,10 @@ header li {
 }
 
 /*Veiculos - Pagina com Dashboard*/
+.filter {
+    margin-bottom: 30px;
+}
+
 .screen {
     min-height: 67vh;
 }

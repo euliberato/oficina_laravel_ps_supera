@@ -32,3 +32,5 @@ Route::get('/veiculos/editar/{id}', [OficinaController::class, 'edit'])->middlew
 Route::put('/veiculos/atualizar/{id}', [OficinaController::class, 'update'])->middleware('auth');
 
 Route::get('/veiculos', [OficinaController::class, 'dashboard'])->middleware('auth');
+
+Route::post('/veiculos/busca', [OficinaController::class, 'search'])->middleware('auth');
