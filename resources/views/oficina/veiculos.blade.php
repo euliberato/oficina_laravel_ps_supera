@@ -10,7 +10,6 @@
     </div>
     <div class="col-md-10 offset-md-1 dashboard-events-container">
         @if(is_countable($carros) && count($carros) > 0)
-
         <form action="/veiculos/busca" method="POST">
             @csrf
             <span>Filtro:</span>
@@ -20,7 +19,6 @@
                 </select>
             <button type="submit">Filtrar</button>
         </form>
-
         <table class="table">
             <thead>
                 <tr>
