@@ -102,22 +102,15 @@ class OficinaController extends Controller
         
         if($request->filtro == 'semana'){
 
-            //Preciso de uma maneira para autenticar a instância Carro abaixo:
-
             $date = Carbon::now()->subDays(7);
-            $carroFiltrado = Carro::where('created_at', '>=', $date)->get();
+            $carros = $user->carros->where('created_at', '>=', $date);
 
-            if(count($carroFiltrado) > 0){
-                return view('oficina.veiculos', ['carroFiltrado' => $carroFiltrado, 'carros' => $carros]);
-            }
-            
-            /*if($user->id != $carroFiltrado[$user->id]->user_id){
+            if(count($carros) == 0){
                 return redirect('/veiculos')->with('msg', 'Nenhuma revisão encontrada nos últimos 7 dias!');
-            }*/
+            }else {
+                return view('oficina.veiculos', ['carros' => $carros]);
+            }
 
-            //dd($user->id, $carroFiltrado[($user->id) - 1]);
-            
-            //dd($carroFiltrado[$user->id]);
         }
 
         if($request->filtro == 'todos'){
